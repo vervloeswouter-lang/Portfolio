@@ -14,3 +14,8 @@ h3 { @apply text-xl md:text-2xl; }
 .btn-outline { @apply border-zinc-300 hover:border-brand hover:text-brand; }
 
 .card { @apply rounded-2xl border border-zinc-200 p-6 shadow-sm; }
+
+@media print {
+  header, footer, nav, .no-print { display: none !important; }
+  .page { box-shadow: none !important; border: none !important; }
+}
