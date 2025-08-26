@@ -16,3 +16,4 @@ Open http://localhost:3000
 - Contact email or handler in `app/contact/page.tsx` and `app/api/contact/route.ts`
 - Brand color in `tailwind.config.ts`
 - Replace `public/og.png`
+
