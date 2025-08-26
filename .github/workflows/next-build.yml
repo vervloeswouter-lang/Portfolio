@@ -6,10 +6,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pwd && node -v && npm -v
-      - run: ls -la && ls -la app || true
+
+      # Make sure we're using the public npm registry
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install --no-audit --no-fund
+          registry-url: 'https://registry.npmjs.org'
+
+      # Extra safety: set registry + retry installs (handles transient 403s)
+      - run: |
+          npm config set registry https://registry.npmjs.org/
+          for i in 1 2 3; do
+            npm install --no-audit --no-fund && break
+            echo "npm install failed (attempt $i), retrying in 10s..."
+            sleep 10
+          done
+
       - run: npm run build
