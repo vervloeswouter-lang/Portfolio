@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileText, Home, User, FolderKanban } from "lucide-react";
+import { Home, FolderKanban, FileText, User, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
   { href: "/", label: "Home", icon: Home },
   { href: "/projects", label: "Projects", icon: FolderKanban },
-  { href: "/about", label: "About", icon: User },
-  { href: "/contact", label: "Contact", icon: FileText },
+  { href: "/blog", label: "Blog", icon: FileText },
+  { href: "/cv", label: "CV", icon: User },
+  { href: "/contact", label: "Contact", icon: Mail }, // keep if you want Contact in the nav
 ];
 
 export function Header() {
@@ -18,8 +19,8 @@ export function Header() {
     <header className="border-b border-zinc-200">
       <div className="container flex h-14 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-semibold">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand text-white">W</span>
-          <span>Wouter.dev</span>
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand text-white">WV</span>
+          <span>Wouter Vervloessem</span>
         </Link>
         <nav className="flex items-center gap-1">
           {links.map((l) => {
@@ -29,7 +30,10 @@ export function Header() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={cn("inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm hover:bg-zinc-50", active && "bg-zinc-100")}
+                className={cn(
+                  "inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm hover:bg-zinc-50",
+                  active && "bg-zinc-100"
+                )}
               >
                 <Icon size={16} />
                 {l.label}
