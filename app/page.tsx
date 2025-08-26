@@ -1,67 +1,160 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle } from "lucide-react";
-import { ProjectCard } from "@/components/project-card";
-import { projects } from "@/lib/data";
+import {
+  ArrowRight,
+  FileDown,
+  Mail,
+  BrainCircuit,
+  BarChart3,
+  Cpu,
+  GitBranch,
+} from "lucide-react";
 
 export default function HomePage() {
   return (
-    <section className="container py-12 md:py-16">
-      <div className="grid gap-10 md:grid-cols-2 md:items-center">
-        {/* LEFT: Intro */}
-        <div className="space-y-6">
+    <main>
+      {/* Hero */}
+      <section className="container py-16 md:py-24">
+        <div className="max-w-3xl">
           <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">
-            Portfolio
+            Wouter Vervloessem
           </span>
-
-          <h1>
-            I turn fuzzy goals into aligned plans and shipped outcomes.
+          <h1 className="mt-4 text-4xl font-semibold md:text-5xl">
+            I turn business challenges into creative tech solutions.
           </h1>
-
-          <p className="text-zinc-600">
-            I’m a creative business professional who bridges stakeholders, operations, and tech.
-            I uncover real needs, frame the problem, prototype fast, and deliver pragmatic solutions
-            the organization can own.
+          <p className="mt-4 text-lg text-zinc-600 md:text-xl">
+            With a strong economics background, hands-on IT expertise, and a creative approach to problem-solving,
+            I bridge the gap between business strategy and technology execution.
           </p>
-
-          <div className="flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/projects" className="btn btn-primary">
-              See work <ArrowRight size={18} />
+              View Projects <ArrowRight size={18} />
+            </Link>
+            <Link href="/cv/Wouter_Vervloessem_CV.pdf" className="btn btn-outline">
+              Download CV <FileDown size={18} />
             </Link>
             <Link href="/contact" className="btn btn-outline">
-              Let’s talk
+              Contact <Mail size={18} />
             </Link>
           </div>
+        </div>
+      </section>
 
-          <ul role="list" className="mt-6 grid gap-2 text-sm text-zinc-700 md:grid-cols-2">
-            {[
-              "Elicit & clarify stakeholder requirements",
-              "Align priorities by impact & feasibility",
-              "Prototype fast; iterate with feedback",
-              "Deliver outcomes & measure value",
-            ].map((m) => (
-              <li key={m} className="flex items-start gap-2">
-                <CheckCircle size={16} className="mt-0.5 text-brand" />
-                <span>{m}</span>
-              </li>
-            ))}
-          </ul>
+      {/* About Me */}
+      <section className="container py-12 md:py-16">
+        <div className="grid gap-10 md:grid-cols-5 md:items-start">
+          <div className="md:col-span-2">
+            <h2>About me</h2>
+            <p className="mt-3 text-zinc-600">
+              I’m Wouter — a creative problem-solver at the intersection of IT, economics, and innovation.
+              I translate business goals into scalable, tech-enabled outcomes.
+            </p>
+            <p className="mt-4 text-sm text-zinc-600">
+              Next step: grow into an <span className="font-medium text-zinc-800">IT Solution Architect</span>,
+              designing scalable solutions and driving innovation.
+            </p>
+          </div>
+
+          <div className="md:col-span-3">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <article className="card">
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="text-brand" size={18} />
+                  <h3 className="text-base font-semibold">Business &amp; Economics Mindset</h3>
+                </div>
+                <p className="mt-2 text-sm text-zinc-600">From strategy to measurable KPIs and real outcomes.</p>
+              </article>
+
+              <article className="card">
+                <div className="flex items-center gap-2">
+                  <Cpu className="text-brand" size={18} />
+                  <h3 className="text-base font-semibold">IT &amp; Automation</h3>
+                </div>
+                <p className="mt-2 text-sm text-zinc-600">
+                  Python, API integrations, Salesforce, Beeple, Excel/VBA.
+                </p>
+              </article>
+
+              <article className="card">
+                <div className="flex items-center gap-2">
+                  <BrainCircuit className="text-brand" size={18} />
+                  <h3 className="text-base font-semibold">Turning Complexity into Clarity</h3>
+                </div>
+                <p className="mt-2 text-sm text-zinc-600">
+                  Automation, dashboards, and data flows that make decisions easy.
+                </p>
+              </article>
+
+              <article className="card">
+                <div className="flex items-center gap-2">
+                  <GitBranch className="text-brand" size={18} />
+                  <h3 className="text-base font-semibold">Bridge Builder</h3>
+                </div>
+                <p className="mt-2 text-sm text-zinc-600">
+                  Align stakeholders across business and engineering to ship.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Teaser */}
+      <section className="container py-12 md:py-16">
+        <div className="mb-8 flex items-end justify-between">
+          <div>
+            <h2>Selected projects</h2>
+            <p className="mt-2 text-zinc-600">A snapshot of work focused on impact and clarity.</p>
+          </div>
+          <Link href="/projects" className="hidden md:inline-flex btn btn-outline">
+            View all <ArrowRight size={18} />
+          </Link>
         </div>
 
-        {/* RIGHT: Featured work */}
-        <div className="card">
-          <h3 className="mb-4">Selected work</h3>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {projects.slice(0, 4).map((p) => (
-              <ProjectCard key={p.slug} project={p} compact />
-            ))}
-          </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          <article className="card flex flex-col">
+            <h3 className="text-lg font-semibold">Beeple Planning Automation</h3>
+            <p className="mt-2 text-sm text-zinc-600">Saved ~4 hrs/week/consultant via planning → contract automation.</p>
+            <div className="mt-4">
+              <Link href="/projects" className="btn btn-outline">View case</Link>
+            </div>
+          </article>
+
+          <article className="card flex flex-col">
+            <h3 className="text-lg font-semibold">Prikklok Python ETL</h3>
+            <p className="mt-2 text-sm text-zinc-600">Fixed-width parsing → TGNoS integration, reliable data into ops.</p>
+            <div className="mt-4">
+              <Link href="/projects" className="btn btn-outline">View case</Link>
+            </div>
+          </article>
+
+          <article className="card flex flex-col">
+            <h3 className="text-lg font-semibold">Paymate Cost-Benefit</h3>
+            <p className="mt-2 text-sm text-zinc-600">Financial modeling + scenario planning to guide decisions.</p>
+            <div className="mt-4">
+              <Link href="/projects" className="btn btn-outline">View case</Link>
+            </div>
+          </article>
+        </div>
+
+        <div className="mt-8 md:hidden">
+          <Link href="/projects" className="btn btn-outline w-full">View all projects</Link>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container py-16 md:py-20">
+        <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-8 text-center shadow-sm">
+          <h2 className="text-2xl md:text-3xl font-semibold">Let’s talk about solving problems creatively.</h2>
+          <p className="mt-2 text-zinc-600">
+            Bring your goals and constraints — I’ll bring structure, creativity, and delivery.
+          </p>
           <div className="mt-6">
-            <Link href="/projects" className="btn btn-outline">
-              See all projects
+            <Link href="/contact" className="btn btn-primary">
+              Contact <Mail size={18} />
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
