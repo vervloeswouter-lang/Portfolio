@@ -7,6 +7,9 @@ import {
   BarChart3,
   Cpu,
   GitBranch,
+  Lightbulb,
+  Workflow,
+  LineChart,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -47,10 +50,6 @@ export default function HomePage() {
             <p className="mt-3 text-zinc-600">
               I’m Wouter — a creative problem-solver at the intersection of IT, economics, and innovation.
               I translate business goals into scalable, tech-enabled outcomes.
-            </p>
-            <p className="mt-4 text-sm text-zinc-600">
-              Next step: grow into an <span className="font-medium text-zinc-800">IT Solution Architect</span>,
-              designing scalable solutions and driving innovation.
             </p>
           </div>
 
@@ -98,27 +97,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AI Capabilities (replaces project teaser) */}
+      {/* Where I add value (replaces AI capabilities) */}
       <section className="container py-12 md:py-16">
         <div className="mb-8">
-          <h2>AI capabilities</h2>
-          <p className="mt-2 text-zinc-600">Pragmatic, business-first applications of AI.</p>
+          <h2>Where I add value</h2>
+          <p className="mt-2 text-zinc-600">Practical ways I help teams move from intent to impact.</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          <article className="card flex flex-col">
-            <h3 className="text-lg font-semibold">Email &amp; Sales Copilot</h3>
-            <p className="mt-2 text-sm text-zinc-600">Drafts, enriches, and routes outreach with your tone &amp; data.</p>
+          <article className="card">
+            <div className="flex items-center gap-2">
+              <Lightbulb className="text-brand" size={18} />
+              <h3 className="text-base font-semibold">Discovery &amp; Alignment</h3>
+            </div>
+            <p className="mt-2 text-sm text-zinc-600">
+              Clarify goals, risks, constraints, and success metrics with stakeholders.
+            </p>
           </article>
 
-          <article className="card flex flex-col">
-            <h3 className="text-lg font-semibold">Document Intake Automation</h3>
-            <p className="mt-2 text-sm text-zinc-600">Parse PDFs/exports; validate, normalize, and hand off to ops.</p>
+          <article className="card">
+            <div className="flex items-center gap-2">
+              <Workflow className="text-brand" size={18} />
+              <h3 className="text-base font-semibold">Automation &amp; Integrations</h3>
+            </div>
+            <p className="mt-2 text-sm text-zinc-600">
+              Build lean workflows and connect systems to reduce manual work and errors.
+            </p>
           </article>
 
-          <article className="card flex flex-col">
-            <h3 className="text-lg font-semibold">Knowledge Assistant (RAG)</h3>
-            <p className="mt-2 text-sm text-zinc-600">Answers from your docs with citations; reduces back-and-forth.</p>
+          <article className="card">
+            <div className="flex items-center gap-2">
+              <LineChart className="text-brand" size={18} />
+              <h3 className="text-base font-semibold">Decision Support</h3>
+            </div>
+            <p className="mt-2 text-sm text-zinc-600">
+              Dashboards and models that surface signals and support clear decisions.
+            </p>
           </article>
         </div>
       </section>
