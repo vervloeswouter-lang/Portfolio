@@ -26,11 +26,11 @@ export const projects: Project[] = [
     impact: ["Clear roles & RACI", "Better throughput", "Fewer escalations"],
   },
   {
-    slug: "ai-knowledge-assistant",
-    title: "AI Knowledge Assistant (RAG)",
+    slug: "presales-engineering",
+    title: "Presales Engineering & Architectural Options",
     summary:
-      "Internal assistant answering from your docs with citations; reduces back-and-forth and speeds decisions.",
-    tags: ["RAG", "Vector Search", "LLM"],
-    impact: ["Faster answers", "Trust via citations", "Self-serve knowledge"],
+      "Drew out architectural possibilities for clients, clarified costs and trade-offs, and supported commercial conversations.",
+    tags: ["Presales", "Architecture", "Costing", "Diagrams"],
+    impact: ["Transparent TCO", "Clear choices & risks", "Sales-savvy engagement"],
   },
 ];
