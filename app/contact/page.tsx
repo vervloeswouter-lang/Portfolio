@@ -10,7 +10,7 @@ export default function ContactPage() {
     <section className="container py-12 md:py-16 max-w-2xl">
       <h1>Contact</h1>
       <p className="text-zinc-600 mb-6">
-        The quickest way is email. If you'd like a call, include 2–3 time windows.
+        The quickest way is email.
       </p>
       <form action="/api/contact" method="post" className="card space-y-4">
         <div>
@@ -30,7 +30,7 @@ export default function ContactPage() {
 
       <p className="mt-6 text-sm text-zinc-600">
         Or email directly:{" "}
-        <Link className="underline" href="mailto:you@example.com">you@example.com</Link>
+        <Link className="underline" href="mailto:you@example.com">woutervervloessem@hotmail.com</Link>
       </p>
     </section>
   );
