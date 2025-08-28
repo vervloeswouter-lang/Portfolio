@@ -97,46 +97,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Where I add value (replaces AI capabilities) */}
-      <section className="container py-12 md:py-16">
-        <div className="mb-8">
-          <h2>Where I add value</h2>
-          <p className="mt-2 text-zinc-600">Practical ways I help teams move from intent to impact.</p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          <article className="card">
-            <div className="flex items-center gap-2">
-              <Lightbulb className="text-brand" size={18} />
-              <h3 className="text-base font-semibold">Discovery &amp; Alignment</h3>
-            </div>
-            <p className="mt-2 text-sm text-zinc-600">
-              Clarify goals, risks, constraints, and success metrics with stakeholders.
-            </p>
-          </article>
-
-          <article className="card">
-            <div className="flex items-center gap-2">
-              <Workflow className="text-brand" size={18} />
-              <h3 className="text-base font-semibold">Automation &amp; Integrations</h3>
-            </div>
-            <p className="mt-2 text-sm text-zinc-600">
-              Build lean workflows and connect systems to reduce manual work and errors.
-            </p>
-          </article>
-
-          <article className="card">
-            <div className="flex items-center gap-2">
-              <LineChart className="text-brand" size={18} />
-              <h3 className="text-base font-semibold">Decision Support</h3>
-            </div>
-            <p className="mt-2 text-sm text-zinc-600">
-              Dashboards and models that surface signals and support clear decisions.
-            </p>
-          </article>
-        </div>
-      </section>
       <TechStack />
       <BusinessStrengths />
       {/* CTA */}
