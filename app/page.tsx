@@ -98,46 +98,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Projects Teaser */}
+      {/* AI Capabilities (replaces project teaser) */}
       <section className="container py-12 md:py-16">
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2>Selected projects</h2>
-            <p className="mt-2 text-zinc-600">A snapshot of work focused on impact and clarity.</p>
-          </div>
-          <Link href="/projects" className="hidden md:inline-flex btn btn-outline">
-            View all <ArrowRight size={18} />
-          </Link>
+        <div className="mb-8">
+          <h2>AI capabilities</h2>
+          <p className="mt-2 text-zinc-600">Pragmatic, business-first applications of AI.</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           <article className="card flex flex-col">
-            <h3 className="text-lg font-semibold">Beeple Planning Automation</h3>
-            <p className="mt-2 text-sm text-zinc-600">Saved ~4 hrs/week/consultant via planning → contract automation.</p>
-            <div className="mt-4">
-              <Link href="/projects" className="btn btn-outline">View case</Link>
-            </div>
+            <h3 className="text-lg font-semibold">Email &amp; Sales Copilot</h3>
+            <p className="mt-2 text-sm text-zinc-600">Drafts, enriches, and routes outreach with your tone &amp; data.</p>
           </article>
 
           <article className="card flex flex-col">
-            <h3 className="text-lg font-semibold">Prikklok Python ETL</h3>
-            <p className="mt-2 text-sm text-zinc-600">Fixed-width parsing → TGNoS integration, reliable data into ops.</p>
-            <div className="mt-4">
-              <Link href="/projects" className="btn btn-outline">View case</Link>
-            </div>
+            <h3 className="text-lg font-semibold">Document Intake Automation</h3>
+            <p className="mt-2 text-sm text-zinc-600">Parse PDFs/exports; validate, normalize, and hand off to ops.</p>
           </article>
 
           <article className="card flex flex-col">
-            <h3 className="text-lg font-semibold">Paymate Cost-Benefit</h3>
-            <p className="mt-2 text-sm text-zinc-600">Financial modeling + scenario planning to guide decisions.</p>
-            <div className="mt-4">
-              <Link href="/projects" className="btn btn-outline">View case</Link>
-            </div>
+            <h3 className="text-lg font-semibold">Knowledge Assistant (RAG)</h3>
+            <p className="mt-2 text-sm text-zinc-600">Answers from your docs with citations; reduces back-and-forth.</p>
           </article>
-        </div>
-
-        <div className="mt-8 md:hidden">
-          <Link href="/projects" className="btn btn-outline w-full">View all projects</Link>
         </div>
       </section>
 
