@@ -11,7 +11,7 @@ import {
   Workflow,
   LineChart,
 } from "lucide-react";
-
+import TechStack from "@/components/tech-stack";
 export default function HomePage() {
   return (
     <main>
@@ -136,7 +136,7 @@ export default function HomePage() {
           </article>
         </div>
       </section>
-
+      <TechStack />
       {/* CTA */}
       <section className="container py-16 md:py-20">
         <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-8 text-center shadow-sm">
