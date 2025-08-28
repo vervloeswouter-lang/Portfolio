@@ -2,31 +2,35 @@ import type { Project } from "@/components/project-card";
 
 export const projects: Project[] = [
   {
-    slug: "contract-automation",
-    title: "Contract Automation (Beeple → DW)",
-    summary: "Python ETL and rules engine to generate contracts from planning, with validation and import.",
-    tags: ["Python", "ETL", "Beeple", "DW"],
-    impact: ["–40% manual checks", "99.9% import accuracy", "+€20k/yr saved"],
+    slug: "business-cases-financial-modeling",
+    title: "Business Cases & Financial Modeling",
+    summary:
+      "Structured business cases that combine economics with data analysis to drive go/no-go decisions.",
+    tags: ["Business Engineering", "Finance", "Data Analysis"],
+    impact: ["Clear ROI & payback", "Scenario planning", "Stakeholder alignment"],
   },
   {
-    slug: "planning-converter",
-    title: "Planning Converter",
-    summary: "Excel/VBA + Python hybrid that normalizes client files into a standard schema.",
-    tags: ["VBA", "Python", "Data Modeling"],
-    impact: ["2h/week saved per planner", "Fewer payroll corrections"],
+    slug: "operations-automations",
+    title: "Operations Automations (Company-Specific)",
+    summary:
+      "Workflow automations across tools and data flows; includes AI assistance for extraction and classification.",
+    tags: ["Python", "Power Automate", "OpenAI", "APIs"],
+    impact: ["–40% manual work (target)", "Fewer errors", "Faster cycle time"],
   },
   {
-    slug: "paymate-analysis",
-    title: "Paymate Cost–Benefit",
-    summary: "Financial model & report outlining efficiency upside and roadmap options.",
-    tags: ["Finance", "ROI", "Strategy"],
-    impact: ["1.3 FTE time freed (target)", "Clear go/no‑go gates"],
+    slug: "service-delivery-model",
+    title: "Service Delivery Model & Operating Playbook",
+    summary:
+      "Designed and aligned a service delivery model that connects business needs with tech solutions.",
+    tags: ["Stakeholder Management", "Operating Model", "Governance"],
+    impact: ["Clear roles & RACI", "Better throughput", "Fewer escalations"],
   },
   {
-    slug: "kpi-dashboard",
-    title: "KPI Dashboard",
-    summary: "Quarterly management view: revenues, margins, and operational KPIs.",
-    tags: ["Power BI", "SQL", "Design"],
-    impact: ["Faster decisions", "Single source of truth"],
+    slug: "ai-knowledge-assistant",
+    title: "AI Knowledge Assistant (RAG)",
+    summary:
+      "Internal assistant answering from your docs with citations; reduces back-and-forth and speeds decisions.",
+    tags: ["RAG", "Vector Search", "LLM"],
+    impact: ["Faster answers", "Trust via citations", "Self-serve knowledge"],
   },
 ];
