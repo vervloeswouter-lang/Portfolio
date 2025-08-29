@@ -1,5 +1,5 @@
 // components/tech-stack.tsx
-/* Tech Stack section wired to YOUR current filenames + graceful fallbacks */
+import LogoBadge from "@/components/logo-badge";
 
 type Logo = { name: string; src: string };
 const categories: { title: string; items: Logo[] }[] = [
@@ -28,28 +28,8 @@ const categories: { title: string; items: Logo[] }[] = [
       { name: "Salesforce", src: "/logos/salesforce.svg" },
     ],
   },
-  // Add more categories any time; missing logo files will render as clean text badges.
+  // add more categories if you like
 ];
-
-function LogoBadge({ name, src }: { name: string; src: string }) {
-  return (
-    <div className="flex items-center gap-2">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt={name}
-        width={28}
-        height={28}
-        className="rounded"
-        onError={(e) => {
-          e.currentTarget.outerHTML =
-            `<span class='inline-flex h-7 items-center rounded-md bg-zinc-100 px-2 text-xs text-zinc-700'>${name}</span>`;
-        }}
-      />
-      <span className="text-sm">{name}</span>
-    </div>
-  );
-}
 
 export default function TechStack() {
   return (
